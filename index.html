@@ -5,18 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARQ · Estudio de arquitectura</title>
-    <link rel="stylesheet" href="scss/style.css">
-    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/99b27c8ee8.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:ital,wght@0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/index.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">ARQ ·</a>
-            <ul>
-                <li><a href="pages/projects.html">Proyectos</a></li>
-                <li><a href="pages/offices.html">Nuestras oficinas</a></li>
-                <li><a href="pages/gallery.html">Galería</a></li>
-                <li><a href="pages/contact.html">Contactanos</a></li>
+        <div class="alert" id="alert">
+            <div class="alert__ctn container">
+                <div class="alert__important"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
+                <p class="alert__text">Recuerde que en la actualidad sólo están disponibles los turnos para consultas <span class="underline">online</span></p>
+                <i class="fa fa-times alert__close" id="alert_close" aria-hidden="true"></i>
+            </div>
+        </div>
+        <nav class="menu container">
+            <h1><a href="/" class="menu__logo">ARQ <span class="menu__logo--dot">·</span></a></h1>
+            <button type="button" class="menu__toggle" id="menu_toggle">
+                <span class="menu__toggle__bars"></span>
+            </button>
+            <ul class="menu__list">
+                <li><a class="menu__list__link" href="pages/projects.html">Proyectos</a></li>
+                <li><a class="menu__list__link" href="pages/offices.html">Nuestras oficinas</a></li>
+                <li><a class="menu__list__link" href="pages/gallery.html">Galería</a></li>
+                <li><a class="menu__list__link menu__list__link--highlight" href="pages/contact.html">Contactanos</a></li>
             </ul>
         </nav>
     </header>
@@ -26,5 +39,6 @@
     <footer>
         
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
