@@ -148,14 +148,25 @@ small {
 }
 
 .button--primary {
+    background-color: transparent;
     border: 2px solid $accent-color-dark;
-    color: $accent-color-dark;   
+    color: $accent-color-dark;
+    transition: background-color .3s ease, color .3s ease;
+    &:hover {
+        background-color: $accent-color-dark;
+        color: #fff!important;
+    }
 }
 
 .button--secondary {
     background-color: $accent-color-light;
     border: 2px solid $accent-color-light;
     color: #fff;
+    transition: background-color .3s ease, border .3s ease;
+    &:hover {
+        background-color: $accent-color-dark;
+        border: 2px solid $accent-color-dark;
+    }
 }
 
 .arrow {
@@ -246,6 +257,10 @@ small {
         .alert__close {
             cursor: pointer;
             font-size: 2.4rem;
+            transition: color .3s ease;
+            &:hover {
+                color: $error-color-dark;
+            }
         }
     }
 }
@@ -335,6 +350,17 @@ small {
             display: block;
             font-size: 1.6rem;
             padding: 1rem 2rem;
+            position: relative;
+            &:after {
+                background: $base-color;
+                bottom: 0;
+                content: '';
+                height: 2px;
+                left: 10%;
+                position: absolute;
+                transition: width .3s ease;
+                width: 0;
+            }
             @media screen and (max-width: $lgmax) {
                 padding: 1rem 1.5rem;
             }
@@ -345,6 +371,9 @@ small {
             &:visited {
                 color: inherit;
             }
+            &:hover:after {
+                width: 80%;
+            }
             &.button--primary {
                 margin-left: 5rem;
                 @media screen and (max-width: $lgmax) {
@@ -354,6 +383,9 @@ small {
                     border-color: rgba($accent-color-light, 0.8);
                     color: rgba($accent-color-light, 0.8);
                     margin-left: 0;
+                }
+                &:after {
+                    content: unset;
                 }
             }
         }
@@ -468,8 +500,12 @@ small {
             padding-top: 4rem;
             position: relative;
             text-align: center;
+            transition: box-shadow .3s ease;
             width: 120px;
             z-index: 3;
+            &:hover {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
             @media screen and (max-width: $xxlmax) {
                 bottom: 3rem;
             }
@@ -478,6 +514,9 @@ small {
             }
             .arrow {
                 margin: 0 auto;
+            }
+            &:hover .arrow {
+                animation-play-state: paused;
             }
         }
     }
@@ -800,8 +839,12 @@ small {
                 }
                 .footer__menu__list__link {
                     color: $base-color;
+                    transform: color .3s ease;
                     &:visited {
                         color: $base-color;
+                    }
+                    &:hover {
+                        color: $accent-color-dark;
                     }
                     &.menu__list__link--active {
                         font-weight: bold;
@@ -837,9 +880,29 @@ small {
                 width: 100%;
             }
             .footer__menu__list__link {
+                background-color: transparent;
+                border-radius: 50%;
+                color: $base-color;
                 display: inline-block;
+                height: 6rem;
                 font-size: 2.2rem;
-                padding: 2rem;
+                margin: 0 1rem;
+                padding: 1.8rem;
+                text-align: center;
+                transition: background-color .3s ease, color .3s ease;
+                width: 6rem;
+                &:hover {
+                    background-color: rgba($accent-color-dark, 0.2);
+                }
+                @media screen and (max-width: $smmax) {
+                    height: 4rem;
+                    margin: 0 1rem;
+                    width: 4rem;
+                    &:hover {
+                        background-color: transparent;
+                        color: $accent-color-light;
+                    }
+                }
             }
         }
     }
