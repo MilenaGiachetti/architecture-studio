@@ -1,0 +1,121 @@
+// ----- MAIN ----- //
+.main {
+    margin: 0 auto;
+    max-width: 2000px;
+    padding-top: 13rem;
+    width: 100%;
+    .title {
+        text-align: center;
+        .title__text {
+            margin: 0 auto;
+            max-width: 35rem;
+            padding-bottom: 3rem;
+        }
+    }
+    .contact {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 5rem;
+        position: relative;
+        &:after {
+            background: url('../images/contact/phone.jpg') center center no-repeat;
+            background-size: cover;
+            content: '';
+            display: block;
+            filter: brightness(1.1) contrast(110%) grayscale(75%);
+            height: calc(100% - 18.5rem);
+            position: absolute;
+            right: 0;
+            top: 2rem;
+            width: 35%;
+        }
+        .contact__form {
+            width: 60%;
+            .form__element {
+                font-size: 1.8rem;
+                padding: 2rem 0;
+                position: relative;
+                input + label, select + label, textarea + label {
+                    color: #c4c4c4;
+                    left: 1rem;
+                    position: absolute;
+                    transition: transform .3s ease, color .3s ease;
+                    transform: translate(5px, 12px);
+                }
+                input:valid + label, input:focus + label, input:not(:placeholder-shown) + label, select + label, textarea + label {
+                    color: $base-color;
+                    font-size: 1.4rem;
+                    transform: translate(15px, -20px);
+                }
+                .form__error {
+                    bottom: 0;
+                    color: $error-color;
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    left: 15px;
+                    position: absolute;
+                    width: 100%;
+                    .form__error--hidden--mobile {
+                        display: none;
+                        @media screen and (min-width: $md) {
+                            display: inline;
+                        }
+                    }
+                }
+                .form__element--counter {
+                    bottom: 0;
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .button {
+                margin-top: 5rem;
+            }
+        } 
+    }
+    .other__contact {
+        background-color: $soft-color;
+        padding: 13rem 0;
+        .other__contact__ctn {
+            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5rem;    
+            position: relative;
+            .other__contact__image__ctn {
+                width: 60%;
+                .other__contact__image {
+                    width: 100%;
+                }
+            }
+            .other__contact__info__ctn {
+                width: 35%;
+                h4 {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 3.6rem;
+                    font-weight: normal;
+                    padding-bottom: 5rem;
+                }
+                .other__contact__info {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 2rem 0;
+                    .socials {
+                        .socials__list__item {
+                            display: inline-block;
+                            .socials__list__link {
+                                display: block;
+                                font-size: 2rem;
+                                padding: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

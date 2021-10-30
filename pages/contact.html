@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARQ · Oficinas</title>
+    <link rel="shortcut icon" href="../images/general/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/99b27c8ee8.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/contact.css">
+</head>
+<body>
+    <header class="header">
+        <div class="alert" id="alert">
+            <div class="alert__ctn container">
+                <div class="alert__important"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
+                <p class="alert__text hidden--mobile">Recuerde que en la actualidad sólo están disponibles los turnos para consultas <span class="underline">online</span></p>
+                <p class="alert__text hidden--desktop">Sólo están disponibles los turnos <span class="underline">online</span></p>
+                <i class="fa fa-times alert__close" id="alert_close" aria-hidden="true"></i>
+            </div>
+        </div>
+        <nav class="menu container">
+            <h1><a href="/" class="logo">ARQ <span class="logo--dot">·</span></a></h1>
+            <button type="button" class="menu__toggle" id="menu_toggle">
+                <span class="menu__toggle__bars"></span>
+            </button>
+            <ul class="menu__list">
+                <li><a class="menu__list__link" href="./projects.html">Proyectos</a></li>
+                <li><a class="menu__list__link" href="./offices.html">Nuestras oficinas</a></li>
+                <li><a class="menu__list__link" href="./gallery.html">Galería</a></li>
+                <li><a class="menu__list__link button button--primary" href="./contact.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="container title">
+            <h3>¿tenés un proyecto en mente?</h3>
+            <p class="title__text">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+        </section>
+        <section class="container">
+            <div class="contact">
+                <form class="contact__form">
+                    <div class="form__element">
+                        <input type="text" name="firstname" id="firstname_id" placeholder=" " required>
+                        <label for="firstname_id">Nombre</label>
+                        <small class="form__error">Ingrese su nombre</small>
+                    </div>
+                    <div class="form__element">
+                        <input type="text" name="lastname" id="lastname_id" placeholder=" " required>
+                        <label for="lastname_id">Apellido</label>
+                        <small class="form__error">Ingrese su apellido</small>
+                    </div>
+                    <div class="form__element">
+                        <input type="email" name="mail" id="mail_id" placeholder=" " required>
+                        <label for="mail_id">E-mail</label>
+                        <small class="form__error">Ingrese un e-mail válido<span class="form__error--hidden--mobile">, por ejemplo: ejemplo@mail.com</span></small>
+                    </div>
+                    <div class="form__element">
+                        <input type="tel" name="phone" id="phone_id" placeholder=" " required>
+                        <label for="phone_id">Teléfono</label>
+                        <small class="form__error">Ingrese un teléfono válido</small>
+                    </div>
+                    <div class="form__element">
+                        <select name="consult" id="consult_id" required>
+                            <option value="">Seleccionar</option>
+                            <option value="budget">Presupuesto</option>
+                            <option value="lorem">Lorem</option>
+                            <option value="ipsum">Ipsum</option>
+                            <option value="dolor">Dolor</option>
+                            <option value="sit_amet">Sit amet</option>
+                        </select>
+                        <label for="consult_id">Tipo de consulta</label>
+                        <small class="form__error">Ingrese su tipo de consulta</small>
+                    </div>
+                    <div class="form__element">
+                        <textarea maxlength="300" rows="10" name="message" id="message_id" placeholder=" " required></textarea>
+                        <label for="message_id">Mensaje</label>
+                        <small class="form__element--counter"><span id="message_counter">0</span> / 300</small>
+                        <small class="form__error">Ingrese su consulta</small>
+                    </div>
+                    <button type="button" class="button button--secondary">ENVIAR</button>
+                </form>
+            </div>
+        </section>
+        <section class="other__contact">
+            <div class="container"> 
+                <div class="other__contact__ctn">
+                    <div class="other__contact__image__ctn">
+                        <img src="../images/contact/other_contact.jpg" alt="" class="other__contact__image">
+                    </div>
+                    <div class="other__contact__info__ctn">
+                        <h4>Otros medios de contacto:</h4>
+                        <div class="other__contact__info">
+                            <p>Télefono: </p>
+                            <p>0800-1234 / 0800-4321</p>
+                        </div>
+                        <div class="other__contact__info">
+                            <p>Mail: </p>
+                            <p>lorem@ipsum.com.ar</p>
+                        </div>
+                        <div class="other__contact__info">
+                            <p>Redes sociales: </p>
+                            <ul class="socials">
+                                <li class="socials__list__item"><a class="socials__list__link" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="socials__list__item"><a class="socials__list__link" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li class="socials__list__item"><a class="socials__list__link" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="socials__list__item"><a class="socials__list__link" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="other__contact__info">
+                            <p>Nuestras oficinas: </p>
+                            <button class="button button--primary">Ver oficinas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__menu">
+                <a href="/" class="logo">ARQ <span class="logo--dot">·</span></a>
+                <ul class="footer__menu__list">
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link menu__list__link--active" href="/">Home</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./projects.html">Proyectos</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./offices.html">Nuestras oficinas</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./gallery.html">Galería</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./contact.html">Contactanos</a></li>
+                </ul>
+            </nav>
+            <div class="footer__contact">
+                <div class="footer__contact__details">
+                    <p class="footer__contact__details__text"><strong>Télefono:</strong> 0800-1234 / 0800-4321</p>
+                    <p><strong>Mail:</strong> <a href="mailto:lorem@ipsum.com.ar?subject=Contacto">lorem@ipsum.com.ar</a></p>
+                </div>
+                <ul class="footer__socials">
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <p class="footer__copyright">© Copyright Lorem dolor situm 2021</p>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
