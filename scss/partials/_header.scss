@@ -1,0 +1,183 @@
+// ----- HEADER ----- //
+.header {
+    background-color: rgba(#fff, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+// Alert
+.alert {
+    background-color: $soft-color;
+    height: 100%;
+    overflow: hidden;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition:  transform 0.5s linear,  height 0.5s linear;
+    &.close {
+        height: 0;
+        transform: scaleY(0);
+        transition:  transform 0.5s linear,  height 0.5s linear;
+    }
+    &.closed {
+        display: none;
+    }
+    .alert__ctn {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        .alert__important {
+            border: 3px solid $base-color;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            i {         
+                color: $base-color;
+                font-size: 1.4rem;
+                padding: 6px 10px;   
+            }
+        }
+        .alert__text {
+            font-size: 1.6rem;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .alert__close {
+            cursor: pointer;
+            font-size: 2.4rem;
+            transition: color .3s ease;
+            &:hover {
+                color: $error-color-dark;
+            }
+        }
+    }
+}
+
+// nav
+.menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    position: relative;
+    @media screen and (max-width: $mdmax) {
+        padding: 1rem 0;
+    }
+    .menu__toggle {
+        align-items: center;
+        cursor: pointer;        
+        display: none;
+        height: 3rem;
+        justify-content: center;
+        width: 2.5rem;
+        @media screen and (max-width: $mdmax) {
+            display: flex;
+        }
+        .menu__toggle__bars {
+            background-color: $base-color;
+            display: block;
+            height: 3px;
+            position: relative;
+            transition: transform .3s ease;         
+            width: 2.5rem;
+            &:after {
+                background-color: $base-color;    
+                content: '';
+                display: block;
+                height: 3px;
+                position: absolute;
+                top: 7px;
+                width: 2.5rem;
+            }
+            &:before {
+                background-color: $base-color;    
+                content: '';
+                display: block;
+                height: 3px;
+                position: absolute;
+                top: -7px;
+                width: 2.5rem;
+            }
+        }
+        &.menu__toggle--close {
+            .menu__toggle__bars {
+                transform: rotate(45deg);     
+                transition: transform .3s ease;         
+                &:after {
+                    top: 0;
+                    transform: rotate(90deg);              
+                }
+                &:before {
+                    top: 0;
+                    transform: rotate(-90deg);                              
+                }
+            }
+        }
+    }
+    .menu__toggle.menu__toggle--close + .menu__list {
+        right: 0;
+        transition: right .3s ease;
+    }
+    .menu__list {
+        display: flex;
+        @media screen and (max-width: $mdmax) {
+            background-color: $base-color;
+            color: $soft-color;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 1rem;
+            position: absolute;
+            right: -100%;
+            text-align: center;
+            top: 5rem;
+            transition: right .3s ease;
+            width: 100%;
+        }
+        .menu__list__link {
+            color: $base-color;
+            display: block;
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            position: relative;
+            &:after {
+                background: $base-color;
+                bottom: 0;
+                content: '';
+                height: 2px;
+                left: 10%;
+                position: absolute;
+                transition: width .3s ease;
+                width: 0;
+            }
+            @media screen and (max-width: $lgmax) {
+                padding: 1rem 1.5rem;
+            }
+            @media screen and (max-width: $mdmax) {
+                color: $soft-color;
+                padding: 2rem;
+            }
+            &:visited {
+                color: inherit;
+            }
+            &:hover:after {
+                width: 80%;
+            }
+            &.button--primary {
+                margin-left: 5rem;
+                @media screen and (max-width: $lgmax) {
+                    margin-left: 2rem;
+                } 
+                @media screen and (max-width: $mdmax) {
+                    border-color: rgba($accent-color-light, 0.8);
+                    color: rgba($accent-color-light, 0.8);
+                    margin-left: 0;
+                }
+                &:after {
+                    content: unset;
+                }
+            }
+        }
+    }
+}
