@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARQ · Oficinas</title>
+    <link rel="shortcut icon" href="../images/general/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/99b27c8ee8.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/offices.css">
+</head>
+<body>
+    <header class="header">
+        <div class="alert" id="alert">
+            <div class="alert__ctn container">
+                <div class="alert__important"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
+                <p class="alert__text hidden--mobile">Recuerde que en la actualidad sólo están disponibles los turnos para consultas <span class="underline">online</span></p>
+                <p class="alert__text hidden--desktop">Sólo están disponibles los turnos <span class="underline">online</span></p>
+                <i class="fa fa-times alert__close" id="alert_close" aria-hidden="true"></i>
+            </div>
+        </div>
+        <nav class="menu container">
+            <h1><a href="/" class="logo">ARQ <span class="logo--dot">·</span></a></h1>
+            <button type="button" class="menu__toggle" id="menu_toggle">
+                <span class="menu__toggle__bars"></span>
+            </button>
+            <ul class="menu__list">
+                <li><a class="menu__list__link" href="./projects.html">Proyectos</a></li>
+                <li><a class="menu__list__link" href="./offices.html">Nuestras oficinas</a></li>
+                <li><a class="menu__list__link" href="./gallery.html">Galería</a></li>
+                <li><a class="menu__list__link button button--primary" href="./contact.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="container title">
+            <h3>sucursales</h3>
+            <p>Te invitamos a conocer nuestras oficinas comerciales</p>
+        </section>
+        <section class="offices">
+            <div class="container">
+                <div class="select">
+                    <label class="select__label" for="offices_id">Buscar sucursal</label>
+                    <select class="select__input" name="offices" id="offices_id">
+                        <option value="">Seleccionar</option>
+                        <option value="almagro">Almagro</option>
+                        <option value="centenario">Centenario</option>
+                        <option value="italia">Italia</option>
+                        <option value="noruega">Noruega</option>
+                        <option value="rivadavia">Rivadavia</option>
+                        <option value="rodriguez_pena">Rodriguez Peña</option>
+                        <option value="serrano">Serrano</option>
+                        <option value="thays">Thays</option>
+                    </select>
+                </div>
+                <div class="map__ctn">
+                    <iframe class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1x3Op6mEmRBbmLAZhuFsbJQg7P0amLz6G" width="640" height="480"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__menu">
+                <a href="/" class="logo">ARQ <span class="logo--dot">·</span></a>
+                <ul class="footer__menu__list">
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link menu__list__link--active" href="/">Home</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./projects.html">Proyectos</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./offices.html">Nuestras oficinas</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./gallery.html">Galería</a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="./contact.html">Contactanos</a></li>
+                </ul>
+            </nav>
+            <div class="footer__contact">
+                <div class="footer__contact__details">
+                    <p class="footer__contact__details__text"><strong>Télefono:</strong> 0800-1234 / 0800-4321</p>
+                    <p><strong>Mail:</strong> <a href="mailto:lorem@ipsum.com.ar?subject=Contacto">lorem@ipsum.com.ar</a></p>
+                </div>
+                <div class="footer__socials">
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li class="footer__menu__list__item"><a class="footer__menu__list__link" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </div>
+            </div>
+            <p class="footer__copyright">© Copyright Lorem dolor situm 2021</p>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>
