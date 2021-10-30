@@ -38,6 +38,18 @@ h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
 
+h3 {
+  font-size: 4.8rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 3.2rem;
+  }
+}
+
 a {
   color: #1A1A1A;
 }
@@ -452,10 +464,16 @@ a:visited {
   bottom: 0;
   content: '';
   display: block;
-  height: 14rem;
+  height: 20rem;
   left: 0;
   position: absolute;
   width: 100%;
+}
+
+@media screen and (max-width: 1439px) {
+  .main .title:after {
+    height: 14rem;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -529,6 +547,7 @@ a:visited {
           align-items: center;
   background: #FFFFFF;
   border-radius: 50%;
+  bottom: 7rem;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   display: -webkit-box;
@@ -548,6 +567,97 @@ a:visited {
   position: relative;
   width: 120px;
   z-index: 1;
+}
+
+@media screen and (max-width: 1439px) {
+  .main .title .title__link {
+    bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .main .title .title__link {
+    bottom: unset;
+  }
+}
+
+.main .process {
+  padding: 6rem 0;
+}
+
+.main .process h3 {
+  padding-bottom: 11rem;
+}
+
+@media screen and (max-width: 767px) {
+  .main .process h3 {
+    padding-bottom: 5rem;
+  }
+}
+
+.main .process .process__list {
+  -webkit-column-gap: 11rem;
+          column-gap: 11rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  row-gap: 6rem;
+}
+
+@media screen and (max-width: 991px) {
+  .main .process .process__list {
+    -webkit-column-gap: 6rem;
+            column-gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main .process .process__list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .main .process .process__list {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.main .process .process__list .process__item .process__item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.main .process .process__list .process__item .process__item__header:before {
+  background-color: rgba(133, 203, 215, 0.15);
+  content: '';
+  display: block;
+  height: 6rem;
+  position: absolute;
+  width: 2rem;
+}
+
+.main .process .process__list .process__item .process__item__header.process__item__header--highlight:before {
+  background-color: rgba(186, 67, 46, 0.2);
+}
+
+.main .process .process__list .process__item .process__item__header .process__item__image {
+  height: 3rem;
+  margin: 1rem;
+  width: 3rem;
+}
+
+.main .process .process__list .process__item .process__item__header .process__item__title {
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .footer {
