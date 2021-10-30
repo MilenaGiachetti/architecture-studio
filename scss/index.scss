@@ -55,9 +55,12 @@ h2, h3, h4, h5, h6 {
 h3 {
     font-size: 4.8rem;
     font-weight: 300;
+    padding-bottom: 11rem;
+    padding-top: 3rem;
     text-align: center;
     @media screen and (max-width: $mdmax) {
         font-size: 3.2rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -66,6 +69,11 @@ a {
     &:visited {
         color: inherit;
     }
+}
+
+small {
+    font-weight: 100;
+    font-size: 1.8rem;
 }
 
 .underline {
@@ -129,6 +137,26 @@ a {
     }
 }
 
+.button--primary {
+    border: 2px solid $accent-color-dark;
+    border-radius: 5px;
+    color: $accent-color-dark;
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    @media screen and (max-width: $lgmax) {
+        margin-left: 2rem;
+    } 
+    @media screen and (max-width: $mdmax) {
+        border-color: rgba($accent-color-light, 0.8);
+        color: rgba($accent-color-light, 0.8);
+        margin-left: 0;
+    }     
+    &:visited {
+        color: inherit;
+    }
+}
+
 .arrow {
     animation: updown 1s infinite alternate ease-in-out;
     background-color: $base-color;
@@ -169,6 +197,13 @@ a {
 }
 
 // ----- HEADER ----- //
+.header {
+    background-color: rgba(#fff, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
 // Alert
 .alert {
     background-color: $soft-color;
@@ -309,21 +344,10 @@ a {
             &:visited {
                 color: inherit;
             }
-            &.menu__list__link--highlight {
-                border: 2px solid $accent-color-dark;
-                border-radius: 5px;
-                color: $accent-color-dark;
+            &.button--primary {
                 margin-left: 5rem;
-                @media screen and (max-width: $lgmax) {
-                    margin-left: 2rem;
-                } 
                 @media screen and (max-width: $mdmax) {
-                    border-color: rgba($accent-color-light, 0.8);
-                    color: rgba($accent-color-light, 0.8);
                     margin-left: 0;
-                }     
-                &:visited {
-                    color: inherit;
                 }
             }
         }
@@ -334,6 +358,7 @@ a {
 .main {
     margin: 0 auto;
     max-width: 2000px;
+    padding-top: 13rem;
     width: 100%;
     // Title
     .title {
@@ -430,39 +455,35 @@ a {
             border-radius: 50%;
             bottom: 7rem;
             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-            display: flex;
-            flex-direction: column;
+            display: block;
             font-size: 2.4rem;
             height: 120px;
-            justify-content: center;
             margin: 0 auto;
-            padding-top: 2rem;
+            padding-top: 4rem;
             position: relative;
+            text-align: center;
             width: 120px;
-            z-index: 1;
+            z-index: 3;
             @media screen and (max-width: $xxlmax) {
                 bottom: 3rem;
             }
             @media screen and (max-width: $smmax) {
                 bottom: unset;
             }
+            .arrow {
+                margin: 0 auto;
+            }
         }
     }
     // Process
     .process {
-        padding: 6rem 0;
-        h3 {
-            padding-bottom: 11rem;
-            @media screen and (max-width: $mdmax) {
-                padding-bottom: 5rem;
-            }
-        }
+        padding: 6rem 0 11rem 0;
         .process__list {
             column-gap: 11rem;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             row-gap: 6rem;
-            @media screen and (max-width: $lgmax) {
+            @media screen and (max-width: $xxlmax) {
                 column-gap: 6rem;
             }
             @media screen and (max-width: $mdmax) {
@@ -495,6 +516,95 @@ a {
                     .process__item__title {
                         font-size: 2.4rem;
                         font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    // Proyects
+    .proyects {
+        background-color: $soft-color;
+        padding-bottom: 6rem;
+        position: relative;
+        &:before {
+            background-image: url("data:image/svg+xml,%3Csvg width='1440' height='71' viewBox='0 0 1440 71' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1440 0L1380.04 1.15918C1320.07 2.31837 1200.15 4.78163 1080.22 4.78163C960.294 4.78163 840.367 2.31837 719.559 5.94082C599.633 9.41837 479.706 18.9816 359.78 26.0816C239.853 33.1816 119.927 37.8184 59.9633 40.2816L0 42.6V71H59.9633C119.927 71 239.853 71 359.78 71C479.706 71 599.633 71 719.559 71C840.367 71 960.294 71 1080.22 71C1200.15 71 1320.07 71 1380.04 71H1440V0Z' fill='%23F2F2F2'/%3E%3C/svg%3E%0A");
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+            display: block;
+            height: 7rem;
+            left: 0;
+            position: absolute;
+            top: -7rem;
+            width: 100%;
+        }
+        .container {
+            padding-bottom: 12rem;
+            .proyects__content {
+                display: flex;
+                @media screen and (max-width: $lgmax) {
+                    flex-direction: column;
+                }
+                .proyects__image__ctn {
+                    border-radius: 5px;
+                    height: 0;
+                    overflow: hidden;
+                    padding-bottom: 40%;
+                    padding-right: 5.5rem;
+                    width: 50%;
+                    @media screen and (max-width: $xlmax) {
+                        padding-right: 2rem;
+                        width: 35%;
+                    }
+                    @media screen and (max-width: $lgmax) {
+                        height: auto;
+                        padding: unset;
+                        width: 100%;
+                    }
+                    .proyects__image {
+                        max-width: 100%;
+                    }
+                }
+                .proyects__text__ctn {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 5.5rem;
+                    width: 50%;
+                    @media screen and (max-width: $xlmax) {
+                        padding-left: 2rem;
+                        width: 65%;
+                    }
+                    @media screen and (max-width: $lgmax) {
+                        padding-left: unset;
+                        padding-top: 5rem;
+                        width: 100%;
+                    }
+                    .proyects__text__title {
+                        border-bottom: 2px solid $base-color;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 2.6rem;
+                        font-weight: 500;
+                        padding-bottom: 2rem;
+                        width: 100%;
+                        @media screen and (max-width: $xlmax) {
+                            font-size: 2.2rem;
+                        }
+                        @media screen and (max-width: $lgmax) {
+                            font-size: 2.6rem;
+                        }
+                    }
+                    .proyects__text__date {
+                        align-self: end;
+                        padding: 2rem 0 4rem 0;
+                    }
+                    .proyects__text {
+                        padding-bottom: 2rem;
+                    }
+                    .button--primary {
+                        align-self: end;
+                        margin-top: auto;
                     }
                 }
             }

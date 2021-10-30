@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARQ · Estudio de arquitectura</title>
+    <link rel="shortcut icon" href="./images/general/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/99b27c8ee8.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:ital,wght@0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/index.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="alert" id="alert">
             <div class="alert__ctn container">
                 <div class="alert__important"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
-                <p class="alert__text">Recuerde que en la actualidad sólo están disponibles los turnos para consultas <span class="underline">online</span></p>
+                <p class="alert__text hidden--mobile">Recuerde que en la actualidad sólo están disponibles los turnos para consultas <span class="underline">online</span></p>
+                <p class="alert__text hidden--desktop">Sólo están disponibles los turnos <span class="underline">online</span></p>
                 <i class="fa fa-times alert__close" id="alert_close" aria-hidden="true"></i>
             </div>
         </div>
@@ -29,7 +31,7 @@
                 <li><a class="menu__list__link" href="pages/projects.html">Proyectos</a></li>
                 <li><a class="menu__list__link" href="pages/offices.html">Nuestras oficinas</a></li>
                 <li><a class="menu__list__link" href="pages/gallery.html">Galería</a></li>
-                <li><a class="menu__list__link menu__list__link--highlight" href="pages/contact.html">Contactanos</a></li>
+                <li><a class="menu__list__link button--primary" href="pages/contact.html">Contactanos</a></li>
             </ul>
         </nav>
     </header>
@@ -46,50 +48,54 @@
                 </a>
             </div>
         </section>
-        <section class="container process">
+        <section class="container process" id="process">
             <h3>nuestro proceso</h3>
             <ul class="process__list">
                 <li class="process__item">
                     <div class="process__item__header">
-                        <img class="process__item__image" src="./images/home/process/plan.svg">
+                        <img class="process__item__image" src="./images/home/process/plan.svg" alt="">
                         <h4 class="process__item__title">Planear</h4>
                     </div>
                     <p class="process__item__text">Fusce sollicitudin mattis dolor ac hendrerit. Sed volutpat posuere lacus sit amet euismod. </p>
                 </li>
                 <li class="process__item">
                     <div class="process__item__header">
-                        <img class="process__item__image" src="./images/home/process/design.svg">
+                        <img class="process__item__image" src="./images/home/process/design.svg" alt="">
                         <h4 class="process__item__title">Diseñar</h4>
                     </div>
                     <p class="process__item__text">Fusce sollicitudin mattis dolor ac hendrerit. Sed volutpat posuere lacus.</p>
                 </li>
                 <li class="process__item">
                     <div class="process__item__header">
-                        <img class="process__item__image" src="./images/home/process/build.svg">
+                        <img class="process__item__image" src="./images/home/process/build.svg" alt="">
                         <h4 class="process__item__title">Construir</h4>
                     </div>
                     <p class="process__item__text">Fusce sollicitudin mattis dolor ac hendrerit. </p>
                 </li>
                 <li class="process__item">
                     <div class="process__item__header process__item__header--highlight">
-                        <img class="process__item__image" src="./images/home/process/enjoy.svg">
+                        <img class="process__item__image" src="./images/home/process/enjoy.svg" alt="">
                         <h4 class="process__item__title">Disfrutar</h4>
                     </div>
                     <p class="process__item__text">Fusce sollicitudin mattis dolor ac hendrerit. Sed volutpat posuere lacus.</p>
                 </li>
             </ul>
         </section>
-        <section style="background-color: #f2f2f2;">
-            <div class="container" style="background-color: #f2f2f2;padding-bottom: 12rem;">
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, commodi repudiandae iure voluptatem dicta nihil totam tempore saepe labore atque doloribus fugit delectus quam ea, libero officiis doloremque, dolor magnam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, commodi repudiandae iure voluptatem dicta nihil totam tempore saepe labore atque doloribus fugit delectus quam ea, libero officiis doloremque, dolor magnam!</p>
-    
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, commodi repudiandae iure voluptatem dicta nihil totam tempore saepe labore atque doloribus fugit delectus quam ea, libero officiis doloremque, dolor magnam!</p>
-    
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, commodi repudiandae iure voluptatem dicta nihil totam tempore saepe labore atque doloribus fugit delectus quam ea, libero officiis doloremque, dolor magnam!</p>
-
-            </div>    
+        <section class="proyects">
+            <div class="container">
+                <h3>proyectos</h3>
+                <div class="proyects__content">
+                    <div class="proyects__image__ctn">
+                        <img src="./images/home/proyects.jpg" class="proyects__image" alt="Edificio torre roja">
+                    </div>
+                    <div class="proyects__text__ctn">
+                        <h4 class="proyects__text__title">Nuestro proyecto más reciente - Torre furia roja</h4>
+                        <small class="proyects__text__date">15 de Marzo, 2021</small>
+                        <p class="proyects__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate scelerisque tortor eu auctor. Nulla id convallis nulla. Vivamus eros diam, dictum a neque non, tempor consequat elit. <strong>Aenean pulvinar</strong> dolor sed velit dictum semper. Vivamus porttitor quam in massa ornare, a cursus velit consequat. Aliquam feugiat, dolor ut congue tristique, tellus nulla varius quam, ut condimentum neque mi vitae tortor. Pellentesque tempor lorem et lorem rutrum dictum. </p>
+                        <a href="/pages/projects.html" class="button--primary">Ver todos los proyectos</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
