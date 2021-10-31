@@ -48,6 +48,9 @@
                     font-size: 1.4rem;
                     transform: translate(15px, -20px);
                 }
+                input:focus, textarea:focus, select:focus {
+                    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+                }
                 .form__error {
                     bottom: 0;
                     color: $error-color;
@@ -55,6 +58,7 @@
                     font-weight: normal;
                     left: 15px;
                     position: absolute;
+                    visibility: hidden;
                     width: 100%;
                     .form__error--hidden--mobile {
                         display: none;
@@ -62,6 +66,9 @@
                             display: inline;
                         }
                     }
+                }
+                &.invalid .form__error {
+                    visibility: visible;
                 }
                 .form__element--counter {
                     bottom: 0;

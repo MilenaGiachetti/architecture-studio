@@ -185,6 +185,7 @@ textarea {
 
 .button {
   border-radius: 5px;
+  cursor: pointer;
   display: block;
   font-size: 1.6rem;
   font-weight: 600;

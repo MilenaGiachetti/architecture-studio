@@ -185,6 +185,7 @@ textarea {
 
 .button {
   border-radius: 5px;
+  cursor: pointer;
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
@@ -608,6 +609,11 @@ textarea {
           transform: translate(15px, -20px);
 }
 
+.main .contact .contact__form .form__element input:focus, .main .contact .contact__form .form__element textarea:focus, .main .contact .contact__form .form__element select:focus {
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
 .main .contact .contact__form .form__element .form__error {
   bottom: 0;
   color: #FF2600;
@@ -615,6 +621,7 @@ textarea {
   font-weight: normal;
   left: 15px;
   position: absolute;
+  visibility: hidden;
   width: 100%;
 }
 
@@ -626,6 +633,10 @@ textarea {
   .main .contact .contact__form .form__element .form__error .form__error--hidden--mobile {
     display: inline;
   }
+}
+
+.main .contact .contact__form .form__element.invalid .form__error {
+  visibility: visible;
 }
 
 .main .contact .contact__form .form__element .form__element--counter {
