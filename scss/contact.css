@@ -580,13 +580,37 @@ textarea {
   width: 35%;
 }
 
+@media screen and (max-width: 991px) {
+  .main .contact:after {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main .contact:after {
+    content: unset;
+  }
+}
+
 .main .contact .contact__form {
   width: 60%;
 }
 
+@media screen and (max-width: 991px) {
+  .main .contact .contact__form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main .contact .contact__form {
+    width: 100%;
+  }
+}
+
 .main .contact .contact__form .form__element {
   font-size: 1.8rem;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   position: relative;
 }
 
@@ -615,7 +639,7 @@ textarea {
 }
 
 .main .contact .contact__form .form__element .form__error {
-  bottom: 0;
+  bottom: 6px;
   color: #FF2600;
   font-size: 1.4rem;
   font-weight: normal;
@@ -670,6 +694,15 @@ textarea {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .main .other__contact .other__contact__ctn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .main .other__contact .other__contact__ctn:before {
   background: url("../images/contact/other_contact.jpg") center center no-repeat;
   background-size: cover;
@@ -682,9 +715,42 @@ textarea {
   width: 60%;
 }
 
+@media screen and (max-width: 991px) {
+  .main .other__contact .other__contact__ctn:before {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main .other__contact .other__contact__ctn:before {
+    background: url("../images/contact/other_contact.jpg") center center no-repeat;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: calc(100% - 7rem);
+    left: 0;
+    padding-bottom: 50%;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
+
 .main .other__contact .other__contact__ctn .other__contact__info__ctn {
   margin-left: auto;
   width: 35%;
+}
+
+@media screen and (max-width: 991px) {
+  .main .other__contact .other__contact__ctn .other__contact__info__ctn {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main .other__contact .other__contact__ctn .other__contact__info__ctn {
+    width: 100%;
+  }
 }
 
 .main .other__contact .other__contact__ctn .other__contact__info__ctn h4 {
@@ -692,6 +758,12 @@ textarea {
   font-size: 3.6rem;
   font-weight: normal;
   padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .main .other__contact .other__contact__ctn .other__contact__info__ctn h4 {
+    padding: 5rem 0 3rem 0;
+  }
 }
 
 .main .other__contact .other__contact__ctn .other__contact__info__ctn .other__contact__info {
@@ -705,6 +777,12 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2rem 0;
+}
+
+@media screen and (max-width: 767px) {
+  .main .other__contact .other__contact__ctn .other__contact__info__ctn .other__contact__info {
+    padding: 1rem 0;
+  }
 }
 
 .main .other__contact .other__contact__ctn .other__contact__info__ctn .other__contact__info .socials .socials__list__item {
