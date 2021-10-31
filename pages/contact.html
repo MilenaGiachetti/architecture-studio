@@ -43,37 +43,41 @@
         <section class="container">
             <div class="contact">
                 <form class="contact__form" id="contact_form">
-                    <div class="form__element">
-                        <input type="text" name="firstname" id="firstname_id" placeholder=" " required>
-                        <label for="firstname_id">Nombre</label>
-                        <small class="form__error">Ingrese su nombre</small>
-                    </div>
-                    <div class="form__element">
-                        <input type="text" name="lastname" id="lastname_id" placeholder=" " required>
-                        <label for="lastname_id">Apellido</label>
-                        <small class="form__error">Ingrese su apellido</small>
+                    <div class="form__element__ctn">
+                        <div class="form__element">
+                            <input type="text" name="firstname" id="firstname_id" placeholder=" " required>
+                            <label for="firstname_id">Nombre</label>
+                            <small class="form__error">Ingrese su nombre</small>
+                        </div>
+                        <div class="form__element">
+                            <input type="text" name="lastname" id="lastname_id" placeholder=" " required>
+                            <label for="lastname_id">Apellido</label>
+                            <small class="form__error">Ingrese su apellido</small>
+                        </div>
                     </div>
                     <div class="form__element">
                         <input type="email" name="mail" id="mail_id" placeholder=" " required>
                         <label for="mail_id">E-mail</label>
                         <small class="form__error">Ingrese un e-mail válido<span class="form__error--hidden--mobile">, por ejemplo: ejemplo@mail.com</span></small>
                     </div>
-                    <div class="form__element">
-                        <input type="tel" name="phone" id="phone_id" placeholder=" " required>
-                        <label for="phone_id">Teléfono</label>
-                        <small class="form__error">Ingrese un teléfono válido</small>
-                    </div>
-                    <div class="form__element">
-                        <select name="consult" id="consult_id" required>
-                            <option value="">Seleccionar</option>
-                            <option value="budget">Presupuesto</option>
-                            <option value="lorem">Lorem</option>
-                            <option value="ipsum">Ipsum</option>
-                            <option value="dolor">Dolor</option>
-                            <option value="sit_amet">Sit amet</option>
-                        </select>
-                        <label for="consult_id">Tipo de consulta</label>
-                        <small class="form__error">Ingrese su tipo de consulta</small>
+                    <div class="form__element__ctn">
+                        <div class="form__element">
+                            <input type="tel" name="phone" id="phone_id" placeholder=" " required>
+                            <label for="phone_id">Teléfono</label>
+                            <small class="form__error">Ingrese un teléfono válido</small>
+                        </div>
+                        <div class="form__element">
+                            <select name="consult" id="consult_id" required>
+                                <option value="">Seleccionar</option>
+                                <option value="budget">Presupuesto</option>
+                                <option value="lorem">Lorem</option>
+                                <option value="ipsum">Ipsum</option>
+                                <option value="dolor">Dolor</option>
+                                <option value="sit_amet">Sit amet</option>
+                            </select>
+                            <label for="consult_id">Tipo de consulta</label>
+                            <small class="form__error">Ingrese su tipo de consulta</small>
+                        </div>
                     </div>
                     <div class="form__element">
                         <textarea maxlength="300" rows="10" name="message" id="message_id" placeholder=" " required></textarea>

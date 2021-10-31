@@ -671,6 +671,28 @@ textarea {
   right: 0;
 }
 
+.main .contact .contact__form .form__element__ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .contact .contact__form .form__element__ctn .form__element {
+  width: 49%;
+}
+
+@media screen and (max-width: 767px) {
+  .main .contact .contact__form .form__element__ctn {
+    display: unset;
+  }
+  .main .contact .contact__form .form__element__ctn .form__element {
+    width: 100%;
+  }
+}
+
 .main .contact .contact__form .button {
   margin-top: 5rem;
 }

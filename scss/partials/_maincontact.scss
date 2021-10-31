@@ -94,6 +94,19 @@
                     right: 0;
                 }
             }
+            .form__element__ctn {
+                display: flex;
+                justify-content: space-between;
+                .form__element {
+                    width: 49%;
+                }
+                @media screen and (max-width: $mdmax) {
+                    display: unset;
+                    .form__element {
+                        width: 100%;
+                    }
+                }
+            }
             .button {
                 margin-top: 5rem;
             }
