@@ -1,0 +1,55 @@
+// ----- MAIN ----- //
+.main {
+    margin: 0 auto;
+    max-width: 2000px;
+    padding-top: 13rem;
+    width: 100%;
+    .gallery {
+        padding: 5rem 0 13rem 0;
+        .gallery__ctn {
+            display: block;
+            columns: 4;
+            gap: 1rem;
+            @media screen and (max-width: $lgmax) {
+                columns: 2;
+            }
+            @media screen and (max-width: $mdmax) {
+                columns: 2;
+            }
+            @media screen and (max-width: $mdmax) {
+                columns: 1;
+            }
+            .image__ctn {
+                break-inside: avoid;
+                margin-bottom: 1rem;
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .slogan {
+        background-color: $base-color;
+        padding: 13rem 0 23rem 0;
+        text-align: center;
+        .slogan__text {
+            color: $soft-color;
+            font-size: 4.4rem;
+            font-weight: 300;
+            z-index: 2;
+            @media screen and (max-width: $mdmax) {
+                font-size: 3.4rem;
+            }
+            .circle {
+                position: relative;
+                z-index: 3;
+                &:after {
+                    background-color: rgba($accent-color-light, 0.75);
+                    right: -3rem;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
