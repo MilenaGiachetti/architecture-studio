@@ -170,8 +170,8 @@
                     margin-left: 2rem;
                 } 
                 @media screen and (max-width: $mdmax) {
-                    border-color: rgba($accent-color-light, 0.8);
-                    color: rgba($accent-color-light, 0.8);
+                    border-color: rgba($soft-color, 0.8);
+                    color: rgba($soft-color, 0.8);
                     margin-left: 0;
                 }
                 &:after {

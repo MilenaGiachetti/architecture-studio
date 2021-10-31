@@ -524,8 +524,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .menu .menu__list .menu__list__link.button--primary {
-    border-color: rgba(133, 203, 215, 0.8);
-    color: rgba(133, 203, 215, 0.8);
+    border-color: rgba(242, 242, 242, 0.8);
+    color: rgba(242, 242, 242, 0.8);
     margin-left: 0;
   }
 }
@@ -659,15 +659,20 @@ textarea {
   position: relative;
 }
 
-.main .other__contact .other__contact__ctn .other__contact__image__ctn {
+.main .other__contact .other__contact__ctn:before {
+  background: url("../images/contact/other_contact.jpg") center center no-repeat;
+  background-size: cover;
+  content: '';
+  display: block;
+  height: calc(100% - 7rem);
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 60%;
 }
 
-.main .other__contact .other__contact__ctn .other__contact__image__ctn .other__contact__image {
-  width: 100%;
-}
-
 .main .other__contact .other__contact__ctn .other__contact__info__ctn {
+  margin-left: auto;
   width: 35%;
 }
 

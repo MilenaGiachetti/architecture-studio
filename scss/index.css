@@ -524,8 +524,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .menu .menu__list .menu__list__link.button--primary {
-    border-color: rgba(133, 203, 215, 0.8);
-    color: rgba(133, 203, 215, 0.8);
+    border-color: rgba(242, 242, 242, 0.8);
+    color: rgba(242, 242, 242, 0.8);
     margin-left: 0;
   }
 }

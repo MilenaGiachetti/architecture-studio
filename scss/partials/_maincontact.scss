@@ -85,13 +85,19 @@
             justify-content: space-between;
             padding-bottom: 5rem;    
             position: relative;
-            .other__contact__image__ctn {
+            &:before {
+                background: url('../images/contact/other_contact.jpg') center center no-repeat;
+                background-size: cover;
+                content: '';
+                display: block;
+                height: calc(100% - 7rem);
+                position: absolute;
+                left: 0;
+                top: 0;
                 width: 60%;
-                .other__contact__image {
-                    width: 100%;
-                }
             }
             .other__contact__info__ctn {
+                margin-left: auto;
                 width: 35%;
                 h4 {
                     font-family: 'Roboto', sans-serif;

@@ -524,8 +524,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .menu .menu__list .menu__list__link.button--primary {
-    border-color: rgba(133, 203, 215, 0.8);
-    color: rgba(133, 203, 215, 0.8);
+    border-color: rgba(242, 242, 242, 0.8);
+    color: rgba(242, 242, 242, 0.8);
     margin-left: 0;
   }
 }
@@ -552,37 +552,38 @@ textarea {
 }
 
 .main .offices .select {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  position: relative;
   top: -4rem;
 }
 
 .main .offices .select .select__label {
-  padding: 0 2rem;
   font-size: 1.4rem;
   font-weight: 500;
+  padding: 0 2rem;
 }
 
 .main .offices .select .select__input {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 1.8rem;
-  color: #c4c4c4;
-  height: 4.5rem;
-  padding: 0 2rem;
-  min-width: 40rem;
   background-color: #fff;
+  border-radius: 5px;
   -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  color: #c4c4c4;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1.8rem;
+  height: 4.5rem;
+  min-width: 40rem;
+  padding: 0 2rem;
+  width: auto !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -592,16 +593,28 @@ textarea {
 }
 
 .main .offices .map__ctn {
-  width: 100%;
   height: 0;
   padding-bottom: 50%;
   position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .main .offices .map__ctn {
+    padding-bottom: 75%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .main .offices .map__ctn {
+    padding-bottom: 100%;
+  }
 }
 
 .main .offices .map__ctn .map {
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 .footer {
