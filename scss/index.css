@@ -1061,8 +1061,11 @@ textarea {
 
 .main .contact::after {
   background: url("../images/home/contact.png") bottom right no-repeat;
+  background-size: contain;
   bottom: 0;
   content: '';
+  -webkit-filter: grayscale(0.5) brightness(1.2);
+          filter: grayscale(0.5) brightness(1.2);
   height: 100%;
   position: absolute;
   right: 0;

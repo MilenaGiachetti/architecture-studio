@@ -374,8 +374,10 @@
         text-align: left;
         &::after {
             background: url('../images/home/contact.png') bottom right no-repeat;
+            background-size: contain;
             bottom: 0;
             content: '';
+            filter: grayscale(0.5) brightness(1.2);
             height: 100%;
             position: absolute;
             right: 0;
