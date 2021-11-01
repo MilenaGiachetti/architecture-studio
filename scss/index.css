@@ -1134,6 +1134,37 @@ textarea {
   font-weight: 300;
 }
 
+.main .clients .slider .slider__controls {
+  padding: 3rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.main .clients .slider .slider__controls .slider__control {
+  height: 35px;
+  padding: 1rem;
+  width: 35px;
+}
+
+.main .clients .slider .slider__controls .slider__control:after {
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 15px;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  width: 15px;
+}
+
+.main .clients .slider .slider__controls .slider__control:hover:after {
+  background-color: #85CBD7;
+}
+
+.main .clients .slider .slider__controls .slider__control.slider__control--active:after {
+  background-color: #0C63B4;
+}
+
 .main .contact {
   background-color: #F2F2F2;
   padding: 11rem 0;

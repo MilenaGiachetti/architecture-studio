@@ -20,7 +20,7 @@
                 <div class="alert__important"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
                 <p class="alert__text hidden--mobile">Recuerde que en la actualidad sólo están disponibles los turnos para consultas&nbsp;<span class="underline">online</span></p>
                 <p class="alert__text hidden--desktop">Sólo están disponibles los turnos <span class="underline">online</span></p>
-                <button type="button" class="alert__close" id="alert_close">
+                <button type="button" class="alert__close" aria-label="Cerrar alerta" id="alert_close">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </button>
             </div>
@@ -117,7 +117,7 @@
             <h3 class="extra--p">clientes</h3>
             <div class="slider">
                 <div class="slider__content">
-                    <button type="button" class="slider__btn slider__btn--previous" id="slider-previous">
+                    <button type="button" class="slider__btn slider__btn--previous" aria-label="Pasar al testimonio anterior" id="slider-previous">
                         <i class="fa fa-chevron-left"></i>
                     </button>
                     <article class="slide slide--active">
@@ -160,8 +160,20 @@
                             <p class="slide__name">Sr. Lorem ipsum, <span class="slide__name--title">director de Larum dolor</span></p>
                         </div>
                     </article>
-                    <button type="button" class="slider__btn slider__btn--next" id="slider-next">
+                    <button type="button" class="slider__btn slider__btn--next" aria-label="Pasar al siguiente testimonio" id="slider-next">
                         <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider__controls">
+                    <button class="slider__control slider__control--active" aria-label="Mostrar testimonio de cliente 1" data-slide="0">
+                    </button>
+                    <button class="slider__control" aria-label="Mostrar testimonio de cliente 2" data-slide="1">
+                    </button>
+                    <button class="slider__control" aria-label="Mostrar testimonio de cliente 3" data-slide="2">
+                    </button>
+                    <button class="slider__control" aria-label="Mostrar testimonio de cliente 4" data-slide="3">
+                    </button>
+                    <button class="slider__control" aria-label="Mostrar testimonio de cliente 5" data-slide="4">
                     </button>
                 </div>
             </div>

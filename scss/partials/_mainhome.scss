@@ -406,6 +406,31 @@
                     }
                 }
             }
+            .slider__controls {
+                padding: 3rem 0;
+                text-align: center;
+                width: 100%;
+                .slider__control {
+                    height: 35px;
+                    padding: 1rem;
+                    width: 35px;
+                    &:after {
+                        background-color: $soft-color;
+                        border-radius: 50%;
+                        content: "";
+                        display: block;
+                        height: 15px;
+                        transition: background-color .3s ease;
+                        width: 15px;
+                    }
+                    &:hover:after {
+                        background-color: $accent-color-light;
+                    }
+                    &.slider__control--active:after {
+                        background-color: $accent-color-dark;
+                    }
+                }
+            }
         }
     }
     .contact {
