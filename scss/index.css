@@ -34,6 +34,19 @@ body {
   width: 100%;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding-top: 13rem;
+  width: 100%;
+  -webkit-transition: padding .3s ease;
+  transition: padding .3s ease;
+}
+
+main.alertClosed {
+  padding-top: 8rem;
+}
+
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
@@ -533,13 +546,6 @@ textarea {
 
 .menu .menu__list .menu__list__link.button--primary:after {
   content: unset;
-}
-
-.main {
-  margin: 0 auto;
-  max-width: 2000px;
-  padding-top: 13rem;
-  width: 100%;
 }
 
 .main .title {

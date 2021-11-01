@@ -34,6 +34,19 @@ body {
   width: 100%;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding-top: 13rem;
+  width: 100%;
+  -webkit-transition: padding .3s ease;
+  transition: padding .3s ease;
+}
+
+main.alertClosed {
+  padding-top: 8rem;
+}
+
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
@@ -537,10 +550,7 @@ textarea {
 
 .main {
   background-color: #F2F2F2;
-  margin: 0 auto;
-  max-width: 2000px;
-  padding: 13rem 0 20rem 0;
-  width: 100%;
+  padding-bottom: 20rem;
 }
 
 .main .content__ctn {

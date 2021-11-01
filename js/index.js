@@ -2,14 +2,17 @@
 const alertStorage = sessionStorage.getItem('alert');
 const alertClose = document.getElementById("alert_close");
 const alert = document.getElementById("alert");
+const main = document.querySelector("main");
 
 if (alertStorage === "closed") {
     alert.classList.add("closed");
+    main.classList.add("alertClosed");
 }
 
 alertClose.addEventListener("click", () => {
     sessionStorage.setItem("alert", "closed");
     alert.classList.add("close");
+    main.classList.add("alertClosed");
 })
 
 // MENU

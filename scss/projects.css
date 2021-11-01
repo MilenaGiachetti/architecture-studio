@@ -34,6 +34,19 @@ body {
   width: 100%;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding-top: 13rem;
+  width: 100%;
+  -webkit-transition: padding .3s ease;
+  transition: padding .3s ease;
+}
+
+main.alertClosed {
+  padding-top: 8rem;
+}
+
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
@@ -546,11 +559,8 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
-  max-width: 2000px;
   min-height: calc(100vh - 32rem);
-  padding: 13rem 0;
-  width: 100%;
+  padding-bottom: 13rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -561,6 +571,7 @@ textarea {
 
 .main .title {
   color: #F2F2F2;
+  padding: 5rem 0;
   text-align: center;
 }
 
