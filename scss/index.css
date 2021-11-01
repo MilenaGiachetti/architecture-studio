@@ -595,8 +595,22 @@ textarea {
 }
 
 .main .title .title__text__ctn {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: auto;
-  padding: 15rem 0 17rem 0;
+  min-height: calc(100vh - 28rem);
+  padding: 2rem 0;
   position: relative;
   text-align: right;
   width: calc(50% + 3rem);
@@ -642,6 +656,9 @@ textarea {
 
 @media screen and (max-width: 575px) {
   .main .title .title__text__ctn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 5rem 0 7rem 0;
     text-align: center;
     width: 100%;
@@ -663,7 +680,7 @@ textarea {
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   display: block;
   font-size: 2.4rem;
-  height: 120px;
+  height: 12rem;
   margin: 0 auto;
   padding-top: 4rem;
   position: relative;
@@ -672,7 +689,7 @@ textarea {
   transition: -webkit-box-shadow .3s ease;
   transition: box-shadow .3s ease;
   transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
-  width: 120px;
+  width: 12rem;
   z-index: 3;
 }
 
@@ -689,7 +706,16 @@ textarea {
 
 @media screen and (max-width: 575px) {
   .main .title .title__link {
+    background: unset;
     bottom: unset;
+    border-radius: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+  }
+  .main .title .title__link:hover {
+    color: #0C63B4;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
   }
 }
 
@@ -808,9 +834,6 @@ textarea {
 
 .main .projects .container .projects__content .projects__image__ctn {
   border-radius: 5px;
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 40%;
   padding-right: 5.5rem;
   width: 50%;
 }
@@ -832,6 +855,7 @@ textarea {
 
 .main .projects .container .projects__content .projects__image__ctn .projects__image {
   max-width: 100%;
+  width: 100%;
 }
 
 .main .projects .container .projects__content .projects__text__ctn {

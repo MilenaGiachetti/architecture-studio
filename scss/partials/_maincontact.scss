@@ -196,6 +196,17 @@
     }
 }
 
+.modal {
+    height: 0;
+    left: -50rem;
+    opacity: 0;
+    position: absolute;
+    top: -50rem;
+    transition: background-color .3s ease, opacity .3s ease;
+    visibility: hidden;
+    width: 0;
+}
+
 .modal.modal--open {
     align-items: center;
     background-color: rgba($base-color, 0.8);
@@ -203,8 +214,11 @@
     height: 100vh;
     justify-content: center;
     left: 0;
+    opacity: 1;
     position: fixed;
     top: 0;
+    transition: background-color .3s ease, opacity .3s ease;
+    visibility: visible;
     width: 100vw;
     z-index: 5;
     .modal__content {
