@@ -77,10 +77,15 @@ h2.extra--p, h3.extra--p {
 
 a {
   color: #1A1A1A;
+  cursor: pointer;
 }
 
 a:visited {
   color: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 small {

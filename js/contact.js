@@ -8,9 +8,17 @@ message.addEventListener("keyup", (e) => {
 })
 
 // --------------------------- VALIDATIONS --------------------------- //
+// form elements
 let form = document.getElementById("contact_form");
 let formBtn = document.getElementById("form_submit");
-let formElements = form.querySelectorAll("[required]")
+let formElements = form.querySelectorAll("[required]");
+
+// modal elements
+let modal = document.getElementById("modal");
+let modalName = document.getElementById("modal_name");
+let firstname = document.getElementById("firstname_id");
+let modalClose = document.getElementById("modal_close");
+let modalContent = document.getElementById("modal_content");
 
 // remove form fields error mesagges
 formElements.forEach((el) => {
@@ -87,7 +95,8 @@ form.addEventListener("submit", (e) => {
     if (!formValidate()) {
         document.querySelector(".invalid [required]").focus();
     } else {
-        console.log("Hola" +document.querySelector("#firstname_id").value + ", su consulta ya fue enviada! Nos contactaremos a la brevedad. Saludos!");
+        modalName.textContent = ` ${firstname.value}`
+        modal.classList.add("modal--open");
     }
 })
 
@@ -96,6 +105,27 @@ formBtn.addEventListener("click", (e) => {
     if (!formValidate()) {
         document.querySelector(".invalid [required]").focus();
     } else {
-        console.log("Hola" +document.querySelector("#firstname_id").value + ", su consulta ya fue enviada! Nos contactaremos a la brevedad. Saludos!");
+        modalName.textContent = ` ${firstname.value}`
+        modal.classList.add("modal--open");
     }
+})
+
+// modal close handler
+modalContent.addEventListener("click", (e) => {
+    e.stopPropagation();
+})
+
+const closeModal = () => {
+    modal.classList.remove("modal--open");
+    formElements.forEach((el) => {
+        el.value = "";
+    })
+}
+
+modal.addEventListener("click", (e) => {
+    closeModal();
+})
+
+modalClose.addEventListener("click", (e) => {
+    closeModal();
 })

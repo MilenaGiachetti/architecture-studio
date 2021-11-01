@@ -82,9 +82,14 @@ h2, h3 {
 
 a {
     color: $base-color;
+    cursor: pointer;
     &:visited {
         color: inherit;
     }
+}
+
+button {
+    cursor: pointer;
 }
 
 small {

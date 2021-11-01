@@ -34,7 +34,7 @@ hashLinks.forEach((link) => {
 
         let hash = e.target.getAttribute("href");
         let element = document.querySelector(hash);
-        let offset = element.offsetTop - 110;
+        let offset = element.offsetTop - 80;
 
         window.scroll({ 
             top: offset, 

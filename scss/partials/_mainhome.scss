@@ -43,8 +43,13 @@
             }
         }
         .title__text__ctn {
+            align-items: end;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             margin-left: auto;
-            padding: 15rem 0 17rem 0;
+            min-height: calc(100vh - 20rem);
+            padding: 8rem 0 2rem 0;
             position: relative;
             text-align: right;
             width: calc(50% + 3rem);
@@ -82,6 +87,7 @@
                 }
             }
             @media screen and (max-width: $smmax) {
+                align-items: center;
                 padding: 5rem 0 7rem 0;
                 text-align: center;
                 width: 100%;
@@ -99,13 +105,13 @@
             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
             display: block;
             font-size: 2.4rem;
-            height: 120px;
+            height: 12rem;
             margin: 0 auto;
             padding-top: 4rem;
             position: relative;
             text-align: center;
             transition: box-shadow .3s ease;
-            width: 120px;
+            width: 12rem;
             z-index: 3;
             &:hover {
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -114,7 +120,14 @@
                 bottom: 3rem;
             }
             @media screen and (max-width: $smmax) {
+                background: unset;
                 bottom: unset;
+                border-radius: unset;
+                box-shadow: unset;
+                &:hover {
+                    color: $accent-color-dark;
+                    box-shadow: unset;
+                }
             }
             .arrow {
                 margin: 0 auto;
@@ -196,9 +209,6 @@
                 }
                 .projects__image__ctn {
                     border-radius: 5px;
-                    height: 0;
-                    overflow: hidden;
-                    padding-bottom: 40%;
                     padding-right: 5.5rem;
                     width: 50%;
                     @media screen and (max-width: $xlmax) {
@@ -212,6 +222,7 @@
                     }
                     .projects__image {
                         max-width: 100%;
+                        width: 100%;
                     }
                 }
                 .projects__text__ctn {
