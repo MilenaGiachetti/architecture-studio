@@ -1,0 +1,26 @@
+// ----- MAIN ----- //
+.main {
+    align-items: center;
+    background-color: $base-color;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 2000px;
+    min-height: calc(100vh - 32rem);
+    padding: 13rem 0;
+    width: 100%;
+    @media screen and (max-width: $mdmax) {
+        padding: 26rem 0;
+    }
+    .title {
+        color: $soft-color;
+        text-align: center;
+        p {
+            padding: 2rem 0 5rem 0;
+        }
+        .button {
+            margin: 0 auto;
+            max-width: 30rem;
+        }
+    }
+}
