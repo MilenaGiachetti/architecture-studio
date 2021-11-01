@@ -66,6 +66,8 @@
             .title__text {
                 font-size: 7rem;
                 font-weight: 300;
+                padding: 0;
+                text-align: inherit;
                 .title__text--highlight {
                     color: $error-color-dark;
                 }
@@ -172,8 +174,8 @@
             }
         }
     }
-    // Proyects
-    .proyects {
+    // Projects
+    .projects {
         background-color: $soft-color;
         padding-bottom: 11rem;
         position: relative;
@@ -191,12 +193,12 @@
             width: 100%;
         }
         .container {
-            .proyects__content {
+            .projects__content {
                 display: flex;
                 @media screen and (max-width: $lgmax) {
                     flex-direction: column;
                 }
-                .proyects__image__ctn {
+                .projects__image__ctn {
                     border-radius: 5px;
                     height: 0;
                     overflow: hidden;
@@ -212,11 +214,11 @@
                         padding: unset;
                         width: 100%;
                     }
-                    .proyects__image {
+                    .projects__image {
                         max-width: 100%;
                     }
                 }
-                .proyects__text__ctn {
+                .projects__text__ctn {
                     align-items: flex-start;
                     display: flex;
                     flex-direction: column;
@@ -231,7 +233,7 @@
                         padding-top: 5rem;
                         width: 100%;
                     }
-                    .proyects__text__title {
+                    .projects__text__title {
                         border-bottom: 2px solid $base-color;
                         font-family: 'Roboto', sans-serif;
                         font-size: 2.6rem;
@@ -245,11 +247,11 @@
                             font-size: 2.6rem;
                         }
                     }
-                    .proyects__text__date {
+                    .projects__text__date {
                         align-self: end;
                         padding: 2rem 0 4rem 0;
                     }
-                    .proyects__text {
+                    .projects__text {
                         padding-bottom: 2rem;
                     }
                     .button--primary {

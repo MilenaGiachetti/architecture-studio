@@ -38,7 +38,7 @@ h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
 
-h3 {
+h2, h3 {
   font-size: 4.8rem;
   font-weight: 300;
   padding-bottom: 1rem;
@@ -47,17 +47,17 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
-  h3 {
+  h2, h3 {
     font-size: 3.2rem;
   }
 }
 
-h3.extra--p {
+h2.extra--p, h3.extra--p {
   padding-bottom: 11rem;
 }
 
 @media screen and (max-width: 767px) {
-  h3.extra--p {
+  h2.extra--p, h3.extra--p {
     padding-bottom: 5rem;
   }
 }
@@ -210,16 +210,16 @@ textarea {
 }
 
 .button--secondary {
-  background-color: #85CBD7;
-  border: 2px solid #85CBD7;
-  color: #fff;
+  background-color: #0C63B4;
+  border: 2px solid #0C63B4;
+  color: #fff !important;
   -webkit-transition: background-color .3s ease, border .3s ease;
   transition: background-color .3s ease, border .3s ease;
 }
 
 .button--secondary:hover {
-  background-color: #0C63B4;
-  border: 2px solid #0C63B4;
+  background-color: #85CBD7;
+  border: 2px solid #85CBD7;
 }
 
 .arrow {
@@ -775,7 +775,7 @@ textarea {
   }
 }
 
-.main .other__contact .other__contact__ctn .other__contact__info__ctn h4 {
+.main .other__contact .other__contact__ctn .other__contact__info__ctn h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 3.6rem;
   font-weight: normal;
@@ -783,7 +783,7 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-  .main .other__contact .other__contact__ctn .other__contact__info__ctn h4 {
+  .main .other__contact .other__contact__ctn .other__contact__info__ctn h3 {
     padding: 5rem 0 3rem 0;
   }
 }

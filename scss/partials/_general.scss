@@ -52,7 +52,7 @@ h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
 }
 
-h3 {
+h2, h3 {
     font-size: 4.8rem;
     font-weight: 300;
     padding-bottom: 1rem;
@@ -185,13 +185,13 @@ textarea {
 }
 
 .button--secondary {
-    background-color: $accent-color-light;
-    border: 2px solid $accent-color-light;
-    color: #fff;
+    background-color: $accent-color-dark;
+    border: 2px solid $accent-color-dark;
+    color: #fff!important;
     transition: background-color .3s ease, border .3s ease;
     &:hover {
-        background-color: $accent-color-dark;
-        border: 2px solid $accent-color-dark;
+        background-color: $accent-color-light;
+        border: 2px solid $accent-color-light;
     }
 }
 

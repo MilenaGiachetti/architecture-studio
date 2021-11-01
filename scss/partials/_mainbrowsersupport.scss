@@ -16,7 +16,12 @@
             padding: 1rem;
         }
         h2 {
+            font-size: 3.2rem;
+            text-align: left;
             padding-bottom: 3rem;
+            @media screen and (max-width: $smmax) {
+                font-size: 2.4rem;
+            }
         }
         .icon__ctn {
             align-items: center;
