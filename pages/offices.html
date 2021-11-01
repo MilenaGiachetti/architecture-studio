@@ -49,18 +49,55 @@
                     <label class="select__label" for="offices_id">Buscar sucursal:</label>
                     <select class="select__input" name="offices" id="offices_id">
                         <option value="">Todas las oficinas</option>
-                        <option value="!1m18!1m12!1m3!1d3283.9384383069223!2d-58.42155608477018!3d-34.60571818045901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f1f97ff89e90592!2sPlaza%20Almagro!5e0!3m2!1ses!2sar!4v1635614440062!5m2!1ses!2sar">Oficina Almagro</option>
-                        <option value="!1m18!1m12!1m3!1d3283.9075353628896!2d-58.43782248477022!3d-34.60649958045876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd055df0a7dafa86e!2sParque%20Centenario!5e0!3m2!1ses!2sar!4v1635614388340!5m2!1ses!2sar">Oficina Centenario</option>
-                        <option value="!1m18!1m12!1m3!1d3284.912343016331!2d-58.423247084771035!3d-34.58108448046552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6c1301b2924b8a91!2sPlaza%20Italia!5e0!3m2!1ses!2sar!4v1635614309060!5m2!1ses!2sar">Oficina Italia</option>
-                        <option value="!1m18!1m12!1m3!1d3285.6615139503815!2d-58.46089068477136!3d-34.56212468047033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a0919ebcce30899!2sPlaza%20Noruega!5e0!3m2!1ses!2sar!4v1635614148608!5m2!1ses!2sar">Oficina Noruega</option>
-                        <option value="!1m18!1m12!1m3!1d3283.457981530614!2d-58.435389784769896!3d-34.61786508045572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30b34282ae8fae18!2sParque%20Rivadavia!5e0!3m2!1ses!2sar!4v1635614410651!5m2!1ses!2sar">Oficina Rivadavia</option>
-                        <option value="!1m18!1m12!1m3!1d3284.248003527934!2d-58.394416384770544!3d-34.59788978046104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc4b597cc0694e09!2sPlaza%20Rodr%C3%ADguez%20Pe%C3%B1a!5e0!3m2!1ses!2sar!4v1635614509427!5m2!1ses!2sar">Oficina Rodriguez Peña</option>
-                        <option value="!1m18!1m12!1m3!1d3284.6083053871102!2d-58.43239758477082!3d-34.58877638046331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x560fe6ff3f099abf!2sPlaza%20Serrano!5e0!3m2!1ses!2sar!4v1635614492529!5m2!1ses!2sar">Oficina Serrano</option>
-                        <option value="!1m18!1m12!1m3!1d3284.7656973810217!2d-58.389310884770815!3d-34.58479468046444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf92167db2b401378!2sParque%20Thays!5e0!3m2!1ses!2sar!4v1635614339503!5m2!1ses!2sar">Oficina Thays</option>
+                        <option value="1">Oficina Almagro</option>
+                        <option value="2">Oficina Centenario</option>
+                        <option value="3">Oficina Italia</option>
+                        <option value="4">Oficina Noruega</option>
+                        <option value="5">Oficina Rivadavia</option>
+                        <option value="6">Oficina Rodriguez Peña</option>
+                        <option value="7">Oficina Serrano</option>
+                        <option value="8">Oficina Thays</option>
                     </select>
                 </div>
-                <div class="map__ctn">
-                    <iframe title="Mapa de oficinas" class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1x3Op6mEmRBbmLAZhuFsbJQg7P0amLz6G" width="640" height="480" style="border:0;" id="map_iframe" allowfullscreen="" loading="lazy"></iframe>
+                <div class="office__ctn" id="office_ctn">
+                    <div class="office__map">
+                        <iframe title="Mapa de oficinas" class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1x3Op6mEmRBbmLAZhuFsbJQg7P0amLz6G" width="640" height="480" style="border:0;" id="map_iframe" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="office__content">
+                        <h3 class="office__content__title" id="office_title">Parque Centenario</h3>
+                        <div class="office__info__ctn">
+                            <div class="office__info">
+                                <p>
+                                    <i class="fa fa-map-marker"></i>
+                                    Dirección: 
+                                </p>
+                                <p id="office_address">Av. Corrientes 123</p>
+                            </div>
+                            <div class="office__info">
+                                <p>
+                                    <i class="fa fa-clock-o"></i>
+                                    Horario: 
+                                </p>
+                                <p id="office_time">10:00hs a 19:00hs</p>
+                            </div>
+                            <div class="office__info">
+                                <p>
+                                    <i class="fa  fa-mobile-phone"></i>
+                                    Teléfono: 
+                                </p>
+                                <p id="office_phone">1234-1234</p>
+                            </div>
+                        </div>
+                        <div class="office__services">
+                            <p class="office__services__title">Servicios disponibles en esta sucursal:</p>
+                            <ul class="office__services__list" id="office_list">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem sit amet</li>
+                                <li>Lorem ipsum dolor ipsum dolor sit amet</li>
+                                <li>Lorem amet</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

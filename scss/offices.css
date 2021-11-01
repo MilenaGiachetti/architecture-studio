@@ -604,29 +604,148 @@ textarea {
   }
 }
 
-.main .offices .map__ctn {
+.main .offices .office__ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 991px) {
+  .main .offices .office__ctn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .offices .office__ctn .office__map {
   height: 0;
   padding-bottom: 50%;
   position: relative;
+  right: 0;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
   width: 100%;
 }
 
 @media screen and (max-width: 767px) {
-  .main .offices .map__ctn {
+  .main .offices .office__ctn .office__map {
     padding-bottom: 75%;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .main .offices .map__ctn {
+  .main .offices .office__ctn .office__map {
     padding-bottom: 100%;
   }
 }
 
-.main .offices .map__ctn .map {
+.main .offices .office__ctn .office__map .map {
   height: 100%;
   position: absolute;
   width: 100%;
+}
+
+.main .offices .office__ctn .office__content {
+  color: #F2F2F2;
+  display: none;
+  padding-right: 3rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 991px) {
+  .main .offices .office__ctn .office__content {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.main .offices .office__ctn .office__content .office__content__title {
+  font-size: 3.6rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 575px) {
+  .main .offices .office__ctn .office__content .office__content__title {
+    font-size: 2.4rem;
+  }
+}
+
+.main .offices .office__ctn .office__content .office__info__ctn {
+  border-bottom: 2px solid #F2F2F2;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.main .offices .office__ctn .office__content .office__info__ctn .office__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .main .offices .office__ctn .office__content .office__info__ctn .office__info {
+    display: block;
+  }
+  .main .offices .office__ctn .office__content .office__info__ctn .office__info p {
+    display: inline-block;
+  }
+}
+
+.main .offices .office__ctn .office__content .office__info__ctn .office__info i {
+  color: #85CBD7;
+  font-size: 2rem;
+  padding-right: 1rem;
+  text-align: center;
+  width: 3rem;
+}
+
+.main .offices .office__ctn .office__content .office__services {
+  padding-top: 4rem;
+}
+
+.main .offices .office__ctn .office__content .office__services .office__services__title {
+  padding-bottom: 1rem;
+}
+
+.main .offices .office__ctn .office__content .office__services .office__services__list li {
+  padding-left: 3rem;
+  position: relative;
+}
+
+.main .offices .office__ctn .office__content .office__services .office__services__list li::before {
+  background-color: #85CBD7;
+  border-radius: 1px;
+  content: "";
+  display: block;
+  height: 7px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 7px;
+}
+
+.main .offices .office__ctn.office__open .office__map {
+  right: 0;
+  width: 50%;
+}
+
+@media screen and (max-width: 991px) {
+  .main .offices .office__ctn.office__open .office__map {
+    width: 100%;
+  }
+}
+
+.main .offices .office__ctn.office__open .office__content {
+  display: block;
 }
 
 .footer {

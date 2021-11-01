@@ -34,21 +34,104 @@
                 }
             }
         }
-        .map__ctn {
-            height: 0;
-            padding-bottom: 50%;
-            position: relative;
-            width: 100%;
-            @media screen and (max-width: $mdmax) {
-                padding-bottom: 75%;
+        .office__ctn {
+            display: flex;
+            flex-direction: row-reverse;
+            @media screen and (max-width: $lgmax) {
+                flex-direction: column;
             }
-            @media screen and (max-width: $smmax) {
-                padding-bottom: 100%;
-            }
-            .map {
-                height: 100%;
-                position: absolute;
+            .office__map {
+                height: 0;
+                padding-bottom: 50%;
+                position: relative;
+                right: 0;
+                transition: width .3s ease;
                 width: 100%;
+                @media screen and (max-width: $mdmax) {
+                    padding-bottom: 75%;
+                }
+                @media screen and (max-width: $smmax) {
+                    padding-bottom: 100%;
+                }
+                .map {
+                    height: 100%;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+            .office__content {
+                color: $soft-color;
+                display: none;
+                padding-right: 3rem;
+                width: 50%;
+                @media screen and (max-width: $lgmax) {
+                    padding: 0;
+                    width: 100%;
+                }
+                .office__content__title {
+                    font-size: 3.6rem;
+                    text-align: left;
+                    @media screen and (max-width: $smmax) {
+                        font-size: 2.4rem;
+                    }
+                }
+                .office__info__ctn {
+                    border-bottom: 2px solid $soft-color;
+                    padding: 2rem 2rem 2rem 0;
+                    .office__info {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 2rem 0;
+                        @media screen and (max-width: $lgmax) {
+                            display: block;
+                            p {
+                                display: inline-block;
+                            }
+                        }
+                        i {
+                            color: $accent-color-light;
+                            font-size: 2rem;
+                            padding-right: 1rem;
+                            text-align: center;
+                            width: 3rem;
+                        }
+                    }
+                }
+                .office__services {
+                    padding-top: 4rem;
+                    .office__services__title {
+                        padding-bottom: 1rem;
+                    }
+                    .office__services__list {
+                        li {
+                            padding-left: 3rem;
+                            position: relative;
+                            &::before {
+                                background-color: $accent-color-light;
+                                border-radius: 1px;
+                                content: "";
+                                display: block;
+                                height: 7px;
+                                left: 7px;
+                                position: absolute;
+                                top: 7px;
+                                width: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.office__open {
+                .office__map {
+                    right: 0;
+                    width: 50%;
+                    @media screen and (max-width: $lgmax) {
+                        width: 100%;
+                    }
+                }
+                .office__content {
+                    display: block;
+                }
             }
         }
     }
