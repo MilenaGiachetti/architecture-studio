@@ -543,7 +543,6 @@ textarea {
 .main {
   margin: 0 auto;
   max-width: 2000px;
-  padding-top: 13rem;
   width: 100%;
 }
 
@@ -609,8 +608,8 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: auto;
-  min-height: calc(100vh - 28rem);
-  padding: 2rem 0;
+  min-height: calc(100vh - 20rem);
+  padding: 8rem 0 2rem 0;
   position: relative;
   text-align: right;
   width: calc(50% + 3rem);
