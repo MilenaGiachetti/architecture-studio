@@ -46,9 +46,9 @@
                     <img src="../images/gallery/3.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Torre roja</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Nunc ac dictum</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="1">
+                                <span class="arrow" data-id="1"></span>
                             </button>
                         </div>
                         <small class="project__date">15 de Marzo, 2021</small>
@@ -58,9 +58,9 @@
                     <img src="../images/gallery/9.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Cuadro raso</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Gravida lectus</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="2">
+                                <span class="arrow" data-id="2"></span>
                             </button>
                         </div>
                         <small class="project__date">12 de Marzo, 2021</small>
@@ -70,9 +70,9 @@
                     <img src="../images/gallery/5.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Torre</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Vestibulum tempor</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="3">
+                                <span class="arrow" data-id="3"></span>
                             </button>
                         </div>
                         <small class="project__date">08 de Febrero, 2021</small>
@@ -82,9 +82,9 @@
                     <img src="../images/gallery/4.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Lorem ipsum</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Iaculis libero</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="4">
+                                <span class="arrow" data-id="4"></span>
                             </button>
                         </div>
                         <small class="project__date">17 de Enero, 2021</small>
@@ -94,9 +94,9 @@
                     <img src="../images/gallery/14.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Dolor sit</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Sagittis magna</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="5">
+                                <span class="arrow" data-id="5"></span>
                             </button>
                         </div>
                         <small class="project__date">22 de Diciembre, 2020</small>
@@ -106,9 +106,9 @@
                     <img src="../images/gallery/16.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Sit amet</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Suspendisse potenti</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="6">
+                                <span class="arrow" data-id="6"></span>
                             </button>
                         </div>
                         <small class="project__date">21 de Octubre, 2020</small>
@@ -118,9 +118,9 @@
                     <img src="../images/gallery/7.jpg" alt="" class="project__image">
                     <div class="project__content">
                         <div class="project__content__title">
-                            <h3 class="project__title">Torre ipsum</h3>
-                            <button type="button" class="button--arrow">
-                                <span class="arrow"></span>
+                            <h3 class="project__title">Viverra</h3>
+                            <button type="button" class="button--proyect button--arrow" data-id="7">
+                                <span class="arrow" data-id="7"></span>
                             </button>
                         </div>
                         <small class="project__date">08 de Agosto, 2020</small>
@@ -133,23 +133,23 @@
             <div class="container">
                 <h2>más proyectos</h2>
                 <div class="project__ctn">
-                    <p>Torre lorem ipsum</p>
+                    <p>Aliquam vitae</p>
                     <small class="project__date">12 de Diciembre, 2019</small>
                 </div>
                 <div class="project__ctn">
-                    <p>Lorem ipsum</p>
+                    <p>Bibendum sed nulla</p>
                     <small class="project__date">23 de Octubre, 2019</small>
                 </div>
                 <div class="project__ctn">
-                    <p>Dolor sit</p>
+                    <p>Gravida</p>
                     <small class="project__date">11 de Junio, 2018</small>
                 </div>
                 <div class="project__ctn">
-                    <p>Amet</p>
+                    <p>Nullam aliquam</p>
                     <small class="project__date">09 de Mayo, 2018</small>
                 </div>
                 <div class="project__ctn">
-                    <p>Dolor sit amet</p>
+                    <p>Suspendisse non euismod sapien</p>
                     <small class="project__date">25 de Marzo, 2017</small>
                 </div>
             </div>
@@ -182,7 +182,19 @@
             <p class="footer__copyright">© Copyright Lorem dolor situm 2021</p>
         </div>
     </footer>
+    <div class="modal" id="modal">
+        <div class="modal__content" id="modal_content">
+            <button type="button" class="modal__close" id="modal_close" ><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="modal__img__ctn">
+                <img src="" alt="" class="modal__img" id='modal_img'>
+                <h3 class="modal__title" id="modal_title"></h3>
+            </div>
+            <p class="modal__text" id="modal_text"></p>
+            <small class="modal__date" id="modal_date"></small>
+        </div>
+    </div>
     <script src="../js/ieCheck.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/projects.js"></script>
 </body>
 </html>
