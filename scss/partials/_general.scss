@@ -48,6 +48,17 @@ body {
     width: 100%;
 }
 
+main {
+    margin: 0 auto;
+    max-width: 2000px;
+    padding-top: 13rem;
+    width: 100%;
+    transition: padding .3s ease;
+    &.alertClosed {
+        padding-top: 8rem;
+    }
+}
+
 h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
 }
